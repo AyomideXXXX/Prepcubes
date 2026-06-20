@@ -23,6 +23,10 @@ explanation TEXT
 CREATE TABLE Placement_results (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 user_id INTEGER,
+exam_type TEXT,
+projected_score INTEGER,
+total_questions INTEGER,
+correct_answer  INTEGER,
 subject TEXT,
 topic TEXT,
 score INTEGER,
