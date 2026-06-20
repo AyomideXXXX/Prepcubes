@@ -2,8 +2,13 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+app.use(express.json()); // lets server read JSON request bodies
+
+const authRoutes = require('./routes/auth');
+app.use('/api/auth', authRoutes);
+
 app.get('/', (req, res) => {
-    res.send('Prep Cubes server is alive!');
+    res.send('Prep Cubes API is running');
 });
 
 app.listen(PORT, () => {
