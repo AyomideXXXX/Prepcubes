@@ -56,5 +56,13 @@ current_streak INTEGER,
 longest_streak INTEGER,
 last_active DATETIME,
 FOREIGN KEY (user_id) REFERENCES Users(id)
-
+);
+CREATE TABLE Friends (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    friend_id INTEGER,
+    status TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES Users(id),
+    FOREIGN KEY (friend_id) REFERENCES Users(id)
 );
