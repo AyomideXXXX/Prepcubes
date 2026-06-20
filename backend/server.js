@@ -16,3 +16,8 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+const protect = require('./middleware/auth');
+
+app.get('/api/protected', protect, (req, res) => {
+    res.json({ message: `Hello ${req.user.name}, you're in.` });
+});
