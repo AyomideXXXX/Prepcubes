@@ -66,3 +66,10 @@ CREATE TABLE Friends (
     FOREIGN KEY (user_id) REFERENCES Users(id),
     FOREIGN KEY (friend_id) REFERENCES Users(id)
 );
+CREATE TABLE Achievements(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+description TEXT,
+criteria TEXT,
+icon TEXT
+);
