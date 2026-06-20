@@ -81,3 +81,12 @@ unlocked_at DATETIME DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (user_id) REFERENCES Users(id),
 FOREIGN KEY (achievement_id) REFERENCES Achievements(id)
 );
+CREATE TABLE Notifications(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    type TEXT,
+    message TEXT,
+    read BOOLEAN,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+   FOREIGN KEY (user_id) REFERENCES Users(id)
+);
