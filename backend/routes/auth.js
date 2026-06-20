@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const db = require('../db/db');
 
 // SIGNUP
@@ -43,7 +44,13 @@ router.post('/login', (req, res) => {
         return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    res.json({ message: 'Login successful', userId: user.id, name: user.name });
+    const token = jwt.sign(
+        { userId: user.id, name: user.name },
+        process.env.JWT_SECRET,
+        { expiresIn: '7d' }
+    );
+
+    res.json({ message: 'Login successful', token, userId: user.id, name: user.name });
 });
 
 module.exports = router;
