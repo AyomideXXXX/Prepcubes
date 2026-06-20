@@ -73,3 +73,11 @@ description TEXT,
 criteria TEXT,
 icon TEXT
 );
+CREATE TABLE User_Achievements(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+user_id INTEGER,
+achievement_id INTEGER,
+unlocked_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (user_id) REFERENCES Users(id),
+FOREIGN KEY (achievement_id) REFERENCES Achievements(id)
+);
