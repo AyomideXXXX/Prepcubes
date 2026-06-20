@@ -35,6 +35,17 @@ user_id INTEGER,
 type TEXT,
 started_at DATETIME DEFAULT CURRENT_TIMESTAMP,
 completed_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-
-
+score INTEGER,
+FOREIGN KEY (user_id) REFERENCES Users (id)
  );
+
+CREATE TABLE Daily_questions(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+user_iD INTEGER,
+question_id INTEGER,
+date DATE,
+answered BOOLEAN,
+correct BOOLEAN,
+FOREIGN KEY(user_id) REFERENCES Users (id),
+FOREIGN KEY(question_id) REFERENCES Questions(id)
+);
