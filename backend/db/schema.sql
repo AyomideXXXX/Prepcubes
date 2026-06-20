@@ -13,9 +13,19 @@ CREATE TABLE Questions(
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 exam_type TEXT,
 subject TEXT,
+topic TEXT,
 difficulty TEXT,
 question_text TEXT,
 options TEXT,
 correct_answer TEXT,
-explamation TEXT
+explanation TEXT
+);
+CREATE TABLE Placement_results (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+user_id INTEGER,
+subject TEXT,
+topic TEXT,
+score INTEGER,
+taken_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (user_id) REFERENCES Users(id)
 );
