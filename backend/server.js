@@ -18,3 +18,5 @@ app.listen(PORT, () => {
 });
 const questionRoutes = require('./routes/questions');
 app.use('/api/questions', questionRoutes);
+const placementRoutes = require('./routes/placement');
+app.use('/api/placement', placementRoutes);
