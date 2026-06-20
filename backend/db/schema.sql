@@ -41,11 +41,20 @@ FOREIGN KEY (user_id) REFERENCES Users (id)
 
 CREATE TABLE Daily_questions(
 id INTEGER PRIMARY KEY AUTOINCREMENT,
-user_iD INTEGER,
+user_id INTEGER,
 question_id INTEGER,
 date DATE,
 answered BOOLEAN,
 correct BOOLEAN,
 FOREIGN KEY(user_id) REFERENCES Users (id),
 FOREIGN KEY(question_id) REFERENCES Questions(id)
+);
+CREATE TABLE Streaks(
+id INTEGER PRIMARY KEY AUTOINCREMENT, 
+user_id INTEGER,
+current_streak INTEGER,
+longest_streak INTEGER,
+last_active DATETIME,
+FOREIGN KEY (user_id) REFERENCES Users(id)
+
 );
