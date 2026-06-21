@@ -4,6 +4,7 @@ name TEXT,
 email TEXT,
 password TEXT,
 exam_type TEXT,
+diamonds INTEGER DEFAULT 0,
 target_score INTEGER,
 test_date DATE,
 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
