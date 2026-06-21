@@ -20,3 +20,5 @@ const questionRoutes = require('./routes/questions');
 app.use('/api/questions', questionRoutes);
 const placementRoutes = require('./routes/placement');
 app.use('/api/placement', placementRoutes);
+const userRoutes = require('./routes/users');
+app.use('/api/users', userRoutes);
