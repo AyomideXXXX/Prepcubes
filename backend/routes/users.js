@@ -16,8 +16,7 @@ db.prepare('UPDATE Users SET exam_type = ? WHERE id = ?').run(exam_type.toUpperC
 
    res.json({ message: 'Exam type saved', exam_type: exam_type.toUpperCase() });
 
-   const userRoutes = require('./routes/users');
-app.use('/api/users', userRoutes);
+   
 });
 
 module.exports = router;

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prep Cubes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page" id="page">
+
+    <!-- LEFT SIDE -->
+    <div class="left" id="leftSide">
+        <div class="brand-logo">
+            <div class="logo-cube">P</div>
+            <span class="brand-name">PREP CUBES</span>
+        </div>
+        <div class="hero">
+            <div class="hero-tag">SAT & ACT Preparation</div>
+            <h1>Study smarter.<br>Score <span>higher.</span><br>Get in.</h1>
+            <p>The gamified prep platform built for students aiming for top US universities.</p>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-num">1600</div>
+                    <div class="stat-label">Max SAT score</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">36</div>
+                    <div class="stat-label">Max ACT score</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Free to start</div>
+                </div>
+            </div>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-dot blue"></div>
+                <span>Placement test that predicts your real score</span>
+            </div>
+            <div class="feature">
+                <div class="feature-dot purple"></div>
+                <span>Daily streaks and XP to keep you consistent</span>
+            </div>
+            <div class="feature">
+                <div class="feature-dot green"></div>
+                <span>Compete with friends on leaderboards</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right" id="rightSide">
+        <div class="form-box" id="formBox">
+
+            <div class="tabs">
+                <button class="tab active" id="loginTab" onclick="showLogin()">Log in</button>
+                <button class="tab" id="signupTab" onclick="showSignup()">Sign up</button>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div id="loginForm">
+                <h2>Welcome back</h2>
+                <p class="sub">Your streak is waiting for you.</p>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••">
+                </div>
+                <button class="btn-primary">Let's go →</button>
+            </div>
+
+            <!-- SIGNUP FORM -->
+            <div id="signupForm" style="display:none;">
+                <h2>Create account</h2>
+                <p class="sub">Start your prep journey today.</p>
+                <div class="form-group">
+                    <label>Full name</label>
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••">
+                </div>
+                <button class="btn-primary">Create account →</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
